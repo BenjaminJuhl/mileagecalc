@@ -21,7 +21,7 @@ fluidPage(
     p('1. Select the number of cylinfers'),
     p('2. Enter the engine displacement'),
     p('3. Enter the gross horsepower'),
-    p('4. Enter the weight of the car'),
+    p('4. Enter the weight of the car (mind the decimal seperator if you enter a number by hand)'),
     p('5. Press "Submit"'),
     
     sidebarPanel(
@@ -40,6 +40,7 @@ fluidPage(
         
         h4('4. What is the weight of the car in 1000 lbs?'),
         p('A value between 1.00 and 6.00'),
+        p('Please try a different decimal seperator "," or "." if you enter a number and get an error.'),
         numericInput('inwt', 'Weight (1000 lbs)', 2.00, min=1.00, max=6.00, step=0.01),
         
         submitButton('Submit')

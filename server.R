@@ -13,7 +13,7 @@ mymodel <- lm(mpg~cyl+disp+hp+wt,data=mycars)
 
 ## the reactive function to make the prediction
 milespergallon <- function(mycyl,mydisp,myhp,mywt,predmodel){
-    indata <- data.frame(cyl=as.factor(mycyl), disp=mydisp, hp=myhp, wt=mywt)
+    indata <- data.frame(cyl=as.factor(mycyl), disp=as.numeric(mydisp), hp=as.numeric(myhp), wt=as.numeric(mywt))
     predict(predmodel,newdata=indata)
 }
 
